@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddOrederActivity">
+
+    <LinearLayout
+        android:id="@+id/et_Layout"
+        android:layout_width="370dp"
+        android:layout_height="42dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.609"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.01">
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="133dp"
+            android:layout_height="40dp"
+
+            android:background="@drawable/et_custom"
+
+            android:fontFamily="@font/roboto_regular"
+            android:hint="@string/password"
+            android:paddingLeft="15dp"
+            android:text="59"
+            android:textColor="#FF0000"
+            android:textSize="18sp" />
+
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="230dp"
+            android:layout_height="40dp"
+            android:layout_alignTop="@+id/tv_title"
+            android:layout_alignBottom="@+id/tv_title"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="-2dp"
+            android:layout_toEndOf="@+id/tv_title"
+            android:background="@drawable/btn_custom"
+            android:fontFamily="@font/roboto_regular"
+            android:onClick="onClick3"
+            android:text="Подтвердить"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_barcode"
+        android:layout_width="370dp"
+        android:layout_height="175dp"
+
+        android:layout_below="@+id/et_Layout"
+        android:layout_alignStart="@+id/et_Layout"
+        android:layout_alignEnd="@+id/et_Layout"
+        android:layout_alignBottom="@+id/et_Layout"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/et_Layout"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/et_Layout"
+        app:layout_constraintTop_toBottomOf="@+id/et_Layout"
+         />
+
+    <LinearLayout
+        android:id="@+id/et_Layout2"
+        android:layout_width="371dp"
+        android:layout_height="74dp"
+
+
+        android:layout_alignStart="@+id/img_barcode"
+        android:layout_alignEnd="@+id/img_barcode"
+        android:layout_alignBottom="@+id/img_barcode"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/img_barcode"
+        app:layout_constraintStart_toStartOf="@+id/img_barcode"
+        app:layout_constraintTop_toBottomOf="@+id/img_barcode">
+
+        <LinearLayout
+            android:id="@+id/firstButtonPanel2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/firstButtonPanel2">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Клиент:"
+
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName3"
+                app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName3"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName3"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2"
+                app:layout_constraintVertical_bias="0.913" />
+
+            <Spinner
+                android:id="@+id/Spinner01"
+                android:layout_width="299dp"
+                android:layout_height="50dp"
+
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_add_client"
+            android:layout_width="49dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/add"
+            android:onClick="onClick2"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/et_time"
+        android:layout_width="210dp"
+        android:layout_height="50dp"
+        android:layout_alignStart="@+id/et_Layout2"
+        android:layout_alignEnd="@+id/et_Layout2"
+        android:layout_alignBottom="@+id/et_Layout2"
+
+
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/et_Layout2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/et_Layout2"
+        app:layout_constraintTop_toBottomOf="@+id/et_Layout2">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Кол-во часов:"
+
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName3"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName3"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName3"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2"
+            app:layout_constraintVertical_bias="0.913" />
+
+        <EditText
+            android:id="@+id/et_times"
+            android:layout_width="87dp"
+            android:layout_height="50dp"
+
+
+            android:background="@drawable/et_custom"
+            android:fontFamily="@font/roboto_regular"
+            android:inputType="number"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/et_Layout3"
+        android:layout_width="371dp"
+        android:layout_height="80dp"
+
+
+        android:layout_alignStart="@+id/et_time"
+        android:layout_alignEnd="@+id/et_time"
+        android:layout_alignBottom="@+id/et_time"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/et_Layout2"
+        app:layout_constraintStart_toStartOf="@+id/et_Layout2"
+        app:layout_constraintTop_toBottomOf="@+id/et_time">
+
+
+        <LinearLayout
+            android:id="@+id/firstButtonPanel3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/firstButtonPanel2">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Услуги:"
+
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName3"
+                app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName3"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName3"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2"
+                app:layout_constraintVertical_bias="0.913" />
+
+            <Spinner
+                android:id="@+id/Spinner02"
+                android:layout_width="299dp"
+                android:layout_height="50dp"
+
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/добавить"
+            android:layout_width="49dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/add4"
+            android:onClick="onClick4"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/ScrollView1"
+        android:layout_width="371dp"
+        android:layout_height="195dp"
+        android:layout_alignStart="@+id/et_Layout3"
+        android:layout_alignEnd="@+id/et_Layout3"
+        android:layout_alignBottom="@+id/et_Layout3"
+        android:background="#D3D8DC"
+        app:layout_constraintEnd_toEndOf="@+id/et_Layout3"
+        app:layout_constraintStart_toStartOf="@+id/et_Layout3"
+        app:layout_constraintTop_toBottomOf="@+id/et_Layout3">
+
+        <TableLayout
+
+            android:id="@+id/tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="210dp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="16sp" />
+            </TableRow>
+
+
+        </TableLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Итог:"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/ScrollView1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ScrollView1"
+        app:layout_constraintTop_toBottomOf="@+id/ScrollView1" />
+
+    <Button
+        android:id="@+id/btn_exit"
+        android:layout_width="371dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/textView4"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/btn_custom"
+        android:fontFamily="@font/roboto_regular"
+        android:onClick="onClick1"
+        android:text="Оформить заказ"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
